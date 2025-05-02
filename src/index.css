@@ -62,7 +62,6 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
   gap: 20px;
-
 }
 
 .btn {
@@ -72,6 +71,30 @@ button:focus-visible {
   border-radius: 8px;
   line-height: 42px;
   cursor: pointer;
+}
+
+.disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.red {
+  color: #c0392b;
+}
+
+.violet {
+  color: #741c77;
+}
+
+.blue {
+  color: blue;
+}
+
+.like-dislike-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
 }
 
 @media (prefers-color-scheme: light) {
