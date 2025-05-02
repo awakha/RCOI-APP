@@ -1,7 +1,6 @@
-import React from "react";
 import { useState } from "react";
 
-function UseState() {
+function Colors() {
   const [count, setCount] = useState(0);
   const [colorIndex, setColorIndex] = useState(0);
 
@@ -38,4 +37,4 @@ function UseState() {
   );
 }
 
-export default UseState;
+export default Colors;
