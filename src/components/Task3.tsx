@@ -1,15 +1,15 @@
 import { useState } from "react";
 
+const phrases = ["Привет", "Ты молодец", "Продолжай"];
+
 const Task3 = () => {
-  const [toggle, setToggle] = useState(false);
-
+  const [toggle, setToggle] = useState(0);
   const handleToggle = () => {
-    setToggle(!toggle);
+    setToggle((toggle + 1) % phrases.length);
   };
-
   return (
     <div>
-      <p>{toggle ? "Включено" : "Выключено"}</p>
+      <p>{phrases[toggle]}</p>
       <button onClick={handleToggle}> Переключатель</button>
     </div>
   );

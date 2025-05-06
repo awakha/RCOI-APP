@@ -1,15 +1,29 @@
+// 3. Сделай компонент с двумя кнопками — "Лайк" и "Дизлайк" — и двумя счетчиками, которые показывают количество лайков и дизлайков. При нажатии на соответствующую кнопку значение соответствующего счетчика должно увеличиваться.
+
 import { useState } from "react";
 
 const Task4 = () => {
-  const [schet, setSchet] = useState(false);
+  const [likes, setLikes] = useState(0);
+  const [deslikes, setDeslikes] = useState(0);
 
-  const handleToggle = () => {
-    setSchet(!schet);
+  const incrementLikes = () => {
+    setLikes(likes + 1);
   };
+  const incrementDeslikes = () => {
+    setDeslikes(deslikes + 1);
+  };
+
   return (
     <div>
-      <p>{schet ? "On" : "Off"}</p>
-      <button onClick={handleToggle}>Handle</button>
+      <div className="like-dislike-box">
+        <p>{likes}</p>
+        <p>{deslikes}</p>
+      </div>
+
+      <div className="btns">
+        <button onClick={incrementLikes}>Лайк</button>
+        <button onClick={incrementDeslikes}>Дизлайк</button>
+      </div>
     </div>
   );
 };
