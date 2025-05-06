@@ -1,29 +1,16 @@
-// 3. Сделай компонент с двумя кнопками — "Лайк" и "Дизлайк" — и двумя счетчиками, которые показывают количество лайков и дизлайков. При нажатии на соответствующую кнопку значение соответствующего счетчика должно увеличиваться.
-
-import { useState } from "react";
+// Создайте компонент "Простой калькулятор". Создайте два поля, в одном пользователь будет вводить одно значение, а другом второе. При нажатии на кнопку в диве должен отображаться текст "Ваш ответ: " и сумма двух значений из полей ввода.
 
 const Task7 = () => {
-  const [likes, setLikes] = useState(0);
-  const [deslikes, setDeslikes] = useState(0);
-
-  const incrementLikes = () => {
-    setLikes(likes + 1);
-  };
-  const incrementDeslikes = () => {
-    setDeslikes(deslikes + 1);
-  };
-
   return (
     <div>
-      <div className="like-dislike-box">
-        <p>{likes}</p>
-        <p>{deslikes}</p>
+      <div>
+        <p>Первое значение</p>
+        <input type="text" />
+        <p>Второе значение</p>
+        <input type="text" />
       </div>
-
-      <div className="btns">
-        <button onClick={incrementLikes}>Лайк</button>
-        <button onClick={incrementDeslikes}>Дизлайк</button>
-      </div>
+      <button>Вывести сумму</button>
+      <p>Ваш ответ: </p>
     </div>
   );
 };
