@@ -7,6 +7,7 @@ const UserCard = ({ name, age, occupation }) => {
       <p>Имя: {name}</p>
       <p>Возраст: {age}</p>
       <p>Профессия: {occupation}</p>
+      <p>E</p>
     </div>
   );
 };
